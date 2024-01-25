@@ -6,7 +6,7 @@ Version Alpha 0.1
 -----------------
 Login system coded and working
 Skeleton structure for html up (minus tables for db)
-
+Added pwdb.sql file for SQL database import
 
 
 
