@@ -31,18 +31,18 @@ if (!isset($_SESSION['loggedin'])) {
 		<fieldset class="fieldset1">
          <legend><b></b>Team Selection:</b></legend>
 	
-		 <input type="checkbox" name="Team1" value="1" id="team1">
-		 <label for="Team1" class="fs">Team 1</label><br>
+		 <input type="checkbox" name="jaguars" value="jaguars" id="jaguars">
+		 <label for="jaguars" class="fs">Jaguars</label><br>
 		
-		 <input type="checkbox" name="leftfield" value="leftfield" id="leftfield" >
-		 <label for="leftfield" class="fs">Team 2</label><br>
+		 <input type="checkbox" name="cougars" value="cougars" id="jaguars" >
+		 <label for="jaguars" class="fs">Cougars</label><br>
 
 		 <div style="display: inline-block;">
-		 <input type="checkbox" name="Team3" value="1" id="team3" >
-		 <label for="Team1" class="fs">Team 3</label><br>
+		 <input type="checkbox" name="reds" value="reds" id="reds" >
+		 <label for="reds" class="fs">Reds</label><br>
 	
-		 <input type="checkbox" name="Team4" value="1" id="team4" >
-		 <label for="Team4" class="fs">Team 4</label><br>
+		 <input type="checkbox" name="cubs" value="cubs" id="cubs" >
+		 <label for="cubs" class="fs">Cubs</label><br>
 		 </fieldset>
 		</div>
 		<fieldset>
