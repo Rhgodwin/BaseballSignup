@@ -104,16 +104,16 @@ h1 {
 	padding: 2px 8px 0 0;
 }
 .navtop div a:hover {
-	color: #eaebed;
+	color: #0f56e350;
 }
 body.loggedin {
-	background-color: #282e42;
+	background-color: #becfebac;
 }
 .content {
 	width: 1000px;
 	max-height: fit-content;
 	margin: 0 auto;
-	background-color: #939aad;
+	background-color: #becfebac;
 }
 .content h2 {
 	margin: 0;
@@ -142,6 +142,7 @@ body.loggedin {
 	padding: 5px;
 	margin: 0 0 10px 0;
 }
+
 .fieldset1 {
 width:max-content;
 
@@ -177,7 +178,7 @@ color:white;
 		display:inline;
 		float:right;
 		margin-right: 105px;
-		background-color: rgb(69, 25, 190);
+		background-color: rgb(90, 88, 96);
 		color:white;
 		}
 
@@ -185,7 +186,7 @@ color:white;
 			display:inline;
 			float:right;
 			margin-right: 105px;
-			background-color: rgb(233, 7, 146);
+			background-color: rgb(37, 164, 109);
 			color:white;
 			}
 .ptable{
@@ -207,7 +208,7 @@ table{
  }
  thead{
 	 font-family: Arial, Helvetica, sans-serif;
-	 background-color: blue;
+	 background-color: rgb(231, 231, 248);
  }
  tr{
 	 padding:50px;
@@ -216,11 +217,12 @@ table{
 	 border: 1px soild black;
  }
  th{
-	 background-color:blue;
+	 background-color:#6d707e;
 
  }
  .btnSubmit{
-	background-color:red;
+	float: left;
+	background-color:ivory;
 	width:100px;
 	margin-left:600px;
 	
