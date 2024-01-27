@@ -8,11 +8,18 @@ Login system coded and working<br>
 Skeleton structure for html up (minus tables for db)<BR>
 Added pwdb.sql file for SQL database import<br>
 
-
+Version Alpha 0.2
+--------------------
+HTML improvements:<br>
+Added Fieldsets in correct placement<br>
+Added Buttons<br>
+Added Table with test data<br>
 
 TODO
 -------------------
 Major refinements need for main page, profile page<br>
-Needs another data base added for players<br>
-Coding for systems to work<br>
+Add extra columns to pwdb to allow for player positon and team data<br>
+Add all PHP for functionality<br>
+Fix placement for all buttons and add functionality<br>
+Add all PHP code for back end<br>
 Basically A TON of improvments!!!!!<br>

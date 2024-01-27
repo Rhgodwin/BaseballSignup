@@ -107,11 +107,13 @@ h1 {
 	color: #eaebed;
 }
 body.loggedin {
-	background-color: #f3f4f7;
+	background-color: #282e42;
 }
 .content {
 	width: 1000px;
+	max-height: fit-content;
 	margin: 0 auto;
+	background-color: #939aad;
 }
 .content h2 {
 	margin: 0;
@@ -124,7 +126,9 @@ body.loggedin {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 	margin: 25px 0;
 	padding: 25px;
-	background-color: #fff;
+	background-color: #6d707e;
+	font-size:xx-large;
+	text-align: center;
 }
 .content > p table td, .content > div table td {
 	padding: 5px;
@@ -139,24 +143,81 @@ body.loggedin {
 	margin: 0 0 10px 0;
 }
 .fieldset1 {
-width: 300px;
-margin-left: 150px;
+width:max-content;
+
 font-size: larger;
 
 }
-.fields {
-	margin-left: 200px;
+.fs1 {
+	float:left;
+}
+.fs2{
+	float:left;
 }
 .tabpos {
 	float:right;
 }
-.buttondiv {
-	display: inline-block !important;
+.btntb1{
+display:inline;
+float:right;
+margin-right: 105px;
+background-color: red;
 }
-.fs {
-	align-items: center;
-	font-size: x-large;
+
+.btntb2{
+	display:inline;
+	float:right;
+	margin-right: 105px;
+	background-color: rgb(112, 94, 168);
+	}
+
+	.btntb3{
+		display:inline;
+		float:right;
+		margin-right: 105px;
+		background-color: rgb(80, 213, 14);
+		}
+
+		.btntb4{
+			display:inline;
+			float:right;
+			margin-right: 105px;
+			background-color: rgb(232, 63, 167);
+			}
+.ptable{
+	padding-top:5px;
+margin-right:300px;
 }
-.fieldsset2 {
-	width: 300px;
+.rost1{
+	text-align: center;
 }
+
+table{
+	width:600px;
+   height: 100%;
+	 border: 5px solid #000;
+	 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+ th, td{
+	 border: 5px outset grey;
+ }
+ thead{
+	 font-family: Arial, Helvetica, sans-serif;
+	 background-color: blue;
+ }
+ tr{
+	 padding:50px;
+ }
+ td{
+	 border: 1px soild black;
+ }
+ th{
+	 background-color:blue;
+
+ }
+ .btnSubmit{
+	background-color:red;
+	width:100px;
+	margin-left:600px;
+	
+ }
