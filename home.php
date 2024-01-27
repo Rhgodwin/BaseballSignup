@@ -158,23 +158,23 @@ if (!isset($_SESSION['loggedin'])) {
 </tbody>
 		</table>
 		<button class="btntb4">
-			Table 4
+			Cougars
 		</button>
 		<button class="btntb3">
-			Table 3
+			Cubs
 		</button>
 		<button class="btntb2">
-			Table 2
+			Jaguars
 		</button>
 		<button class="btntb1">
-			Table 1
+			Reds
 		</button>
 
 		
 		</div>
-			<div class="btnSubmit">
-				<button>Submit Selection</button>
-			</div>
+			
+				<button class="btnSubmit">Submit Selection</button>
+			
 	
 
 		

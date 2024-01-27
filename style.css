@@ -162,6 +162,7 @@ display:inline;
 float:right;
 margin-right: 105px;
 background-color: red;
+color:white;
 }
 
 .btntb2{
@@ -169,20 +170,23 @@ background-color: red;
 	float:right;
 	margin-right: 105px;
 	background-color: rgb(112, 94, 168);
+	color:white;
 	}
 
 	.btntb3{
 		display:inline;
 		float:right;
 		margin-right: 105px;
-		background-color: rgb(80, 213, 14);
+		background-color: rgb(69, 25, 190);
+		color:white;
 		}
 
 		.btntb4{
 			display:inline;
 			float:right;
 			margin-right: 105px;
-			background-color: rgb(232, 63, 167);
+			background-color: rgb(233, 7, 146);
+			color:white;
 			}
 .ptable{
 	padding-top:5px;
@@ -221,3 +225,9 @@ table{
 	margin-left:600px;
 	
  }
+.test {
+	display:flexbox;
+	width:50px;
+	float:left;
+
+}
