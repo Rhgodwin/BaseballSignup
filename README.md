@@ -14,6 +14,7 @@ HTML improvements:<br>
 Added Fieldsets in correct placement<br>
 Added Buttons<br>
 Added Table with test data<br>
+Added DbFunctions.php (class) for db functions (NOT WORKING ATM!)<br>
 
 TODO
 -------------------
