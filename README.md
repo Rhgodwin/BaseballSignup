@@ -15,6 +15,7 @@ Added Fieldsets in correct placement<br>
 Added Buttons<br>
 Added Table with test data<br>
 Added DbFunctions.php (class) for db functions (NOT WORKING ATM!)<br>
+Moved all Connection functionality to Dbfunctions.php<br>
 Added new Table to Database for Player Name, Position, Team.<br>
 
 TODO

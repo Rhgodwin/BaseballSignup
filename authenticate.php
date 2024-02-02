@@ -1,13 +1,18 @@
 <?php
 session_start();
+require_once("dbFunctions.php");
+
 // Connection ifno
 
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'pwdb';
+$host = 'localhost';
+$uid = 'root';
+$pw = '';
+$db = 'pwdb';
+
+
 // Try and connect using the info above.
-$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+
+$con = new ("$host, $uid, $pw, $db");
 if ( mysqli_connect_errno() ) {
 	// If failure to connect display error
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
