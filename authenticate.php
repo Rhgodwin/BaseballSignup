@@ -1,22 +1,22 @@
 <?php
-session_start();
 require_once("dbFunctions.php");
+session_start();
+
 
 // Connection ifno
 
-$host = 'localhost';
-$uid = 'root';
-$pw = '';
-$db = 'pwdb';
-
-
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'pwdb';
 // Try and connect using the info above.
-
-$con = new ("$host, $uid, $pw, $db");
+$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {
 	// If failure to connect display error
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
+
+
 
 // check if the data from the login form was submitted, isset() will check if the data exists.
 if ( !isset($_POST['username'], $_POST['password']) ) {

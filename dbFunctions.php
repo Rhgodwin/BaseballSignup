@@ -2,24 +2,7 @@
 
 class dbFunctions{
 
-    
-//constructor
-public function __construct($host = null, $uid = null, $pw = null, $db = null)
-{
-    $this->HostName = $host;
-    $this->UserID = $uid;
-    $this->Password = $pw;
-    $this->DBName = $db;
-    $this->Con = mysqli_connect($host, $uid, $pw, $db);
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }
-}
-//destructor
-public function __destruct()
-{
-    $this->Con->Close();
-}
+
 private function Get_UserName_From_DB()
 {
     $con = mysqli_connect("localhost", "root", "", "pwdb");
