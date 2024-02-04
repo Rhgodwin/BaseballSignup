@@ -2,7 +2,7 @@
   	box-sizing: border-box;
   	font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
   	font-size: 16px;
-}
+}/* The Body of the login page*/
 body {
   	background-image: linear-gradient(to bottom right,lightblue, #eaebed);
 }
@@ -57,19 +57,128 @@ body {
   	transition: background-color 0.2s;
 }
 .top {
-    background-color: lightblue;
+    background-color:lightblue;
+
 	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
     color:#ffffff;
     justify-content: center;
     text-align: center;
    padding-top:50px;
-   padding-bottom: 20px;;
-}
+   padding-bottom: 20px;
+   
+}/* End Body of the login page*/
 h1 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size:50px;
 }
+ /* The Body of the input (home) page*/
+body{
+    background-color:lightblue;
+}
+.welcome {
+    
+    justify-content: center;
+	text-align-last: center;
+   padding-top:50px;
+   padding-bottom: 20px;;
+}
+/* FOR TITLE of the Signup Page */
+h1 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:50px;
+} /* FOR header of the checkbox input */
+h4 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+} /* FOR Nav bar */
+.navtop {
+	background-color: #2f3947;
+	height: 60px;
+	width: 100%;
+	border: 0;
+}
+.navtop div {
+	display: flex;
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
+}
+.navtop div h1, .navtop div a {
+	display: inline-flex;
+	align-items: center;
+}
+.navtop div h1 {
+	flex: 1;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: normal;
+}
+.navtop div a {
+	padding: 0 20px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}/* FOR for nav bar links */
+.navtop div a:hover {
+	color: rgba(90, 235, 17, 0.937);
+}/* FOR feildset (checkbox) of the Signup Page */
+
+	.fs1 {
+		flex:1 auto;
+	}
+	.fs2{
+		flex:1 auto;
+	}
+	
+	ul {
+		list-style-type: none;
+		padding: 0;
+	  }
+	  /* FOR Table style is not working, need help to figure out why */
+	  table, td, th {  
+		border: 1px solid #2f3947;
+		height: 15%;
+		text-align: center;
+
+	  }
+	  
+	  th {  
+		
+		font-family: Arial, Helvetica, sans-serif;
+	  }
+	  
+
+	  table {
+		border-collapse: collapse;
+		
+		
+	  }
+	  
+	  th, td {
+		padding: 15px;}
+	tr:hover {
+	background-color:aliceblue;
+
+}
+tr {
+	background-color:#c1c4c8;
+}
+/* FOR buttons of the teams again not working not sure why? */
+.teambutton {
+	position: absolute;
+	
+	
+  }
+  
+/*
 .navtop {
 	background-color: #2f3947;
 	height: 60px;
