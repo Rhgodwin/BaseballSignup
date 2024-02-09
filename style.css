@@ -88,7 +88,12 @@ h1 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size:50px;
-} /* FOR header of the checkbox input */
+} 
+h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:20px;
+}
+/* FOR header of the checkbox input */
 h4 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
@@ -143,7 +148,7 @@ h4 {
 		padding: 0;
 	  }
 	  /* FOR Table style is not working, need help to figure out why */
-	  table, td, th {  
+	  td, th {  
 		border: 1px solid #2f3947;
 		height: 15%;
 		text-align: center;
@@ -158,6 +163,9 @@ h4 {
 
 	  table {
 		border-collapse: collapse;
+		margin-right: 20px;
+		margin-top: 20px;
+		min-width: 40%;
 		
 		
 	  }
@@ -171,172 +179,64 @@ h4 {
 tr {
 	background-color:#c1c4c8;
 }
-/* FOR buttons of the teams again not working not sure why? */
-.teambutton {
-	position: absolute;
+
+.data{
+	display:flex;
+	align-items:flex-start;
 	
-	
+}
+.teambuttoncontainer button {
+	width:100%; /* Optional: Makes buttons fill the container */
+	/* Additional button styles */
+	cursor: pointer;
   }
-  
-/*
-.navtop {
-	background-color: #2f3947;
-	height: 60px;
-	width: 100%;
-	border: 0;
-}
-.navtop div {
-	display: flex;
-	margin: 0 auto;
-	width: 1000px;
-	height: 100%;
-}
-.navtop div h1, .navtop div a {
-	display: inline-flex;
+  .buttons-fieldset {
+	font-size:larger;
+	display:flex;
+	flex-direction: row;
+	gap: 1px;
+	margin-left:20px;
+	width:40%;
+  }
+button {
+	cursor:pointer;
+	width:100px;
+	padding:5px;
+	margin-left:68px;
 	align-items: center;
 }
-.navtop div h1 {
-	flex: 1;
-	font-size: 24px;
-	padding: 0;
-	margin: 0;
-	color: #eaebed;
-	font-weight: normal;
-}
-.navtop div a {
-	padding: 0 20px;
-	text-decoration: none;
-	color: #c1c4c8;
-	font-weight: bold;
-}
-.navtop div a i {
-	padding: 2px 8px 0 0;
-}
-.navtop div a:hover {
-	color: #eaebed;
-}
-body.loggedin {
-	background-color: #282e42;
-}
-.content {
-	width: 1000px;
-	max-height: fit-content;
-	margin: 0 auto;
-	background-color: #939aad;
-}
-.content h2 {
-	margin: 0;
-	padding: 25px 0;
-	font-size: 22px;
-	border-bottom: 1px solid #e0e0e3;
-	color: #4a536e;
-}
-.content > p, .content > div {
-	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-	margin: 25px 0;
-	padding: 25px;
-	background-color: #6d707e;
-	font-size:xx-large;
-	text-align: center;
-}
-.content > p table td, .content > div table td {
-	padding: 5px;
-}
-.content > p table td:first-child, .content > div table td:first-child {
-	font-weight: bold;
-	color: #4a536e;
-	padding-right: 15px;
-}
-.content > div p {
-	padding: 5px;
-	margin: 0 0 10px 0;
-}
-.fieldset1 {
-width:max-content;
-
-font-size: larger;
-
-}
-.fs1 {
-	float:left;
+.fs1{
+	margin-left:50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-family:larger;
+	width: 35%;
 }
 .fs2{
-	float:left;
+	margin-left:50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: larger;
+	width: 35%;
 }
-.tabpos {
-	float:right;
-}
-.btntb1{
-display:inline;
-float:right;
-margin-right: 105px;
-background-color: red;
-color:white;
-}
-
-.btntb2{
-	display:inline;
-	float:right;
-	margin-right: 105px;
-	background-color: rgb(112, 94, 168);
-	color:white;
-	}
-
-	.btntb3{
-		display:inline;
-		float:right;
-		margin-right: 105px;
-		background-color: rgb(69, 25, 190);
-		color:white;
-		}
-
-		.btntb4{
-			display:inline;
-			float:right;
-			margin-right: 105px;
-			background-color: rgb(233, 7, 146);
-			color:white;
-			}
-.ptable{
-	padding-top:5px;
-margin-right:300px;
-}
-.rost1{
+  .submit{
+	margin-left:50px;
 	text-align: center;
-}
-
-table{
-	width:600px;
-   height: 100%;
-	 border: 5px solid #000;
-	 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
- }
- th, td{
-	 border: 5px outset grey;
- }
- thead{
-	 font-family: Arial, Helvetica, sans-serif;
-	 background-color: blue;
- }
- tr{
-	 padding:50px;
- }
- td{
-	 border: 1px soild black;
- }
- th{
-	 background-color:blue;
-
- }
- .btnSubmit{
-	background-color:red;
-	width:100px;
-	margin-left:600px;
-	
- }
-.test {
-	display:flexbox;
-	width:50px;
+    width:35%;
+  }
+  .inputbtn{
+	width:100%;
+	padding:10px;
+  }
+  .img1{
 	float:left;
-
-}
+	height:200px;
+	width:200px;
+	margin-left:150px;
+	border-radius:50%;
+  }
+  .img2{
+	float:right;
+	height:200px;
+	width:200px;
+	margin-right:150px;
+	border-radius:50%;
+  }
