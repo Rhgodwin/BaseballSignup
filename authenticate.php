@@ -1,5 +1,5 @@
 <?php
-require_once("dbFunctions.php");
+
 session_start();
 
 

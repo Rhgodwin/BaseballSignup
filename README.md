@@ -36,7 +36,7 @@ Add addtional improve PHP code for back end<br>
 
 Known Bugs
 --------------------------------
-Adds an empty $_POST on login<br>
+<s>Adds an empty $_POST on login</s>(BUG SQUASHED)<br>
 
 *******************************************************************<br>
 Will enter Beta Builds when all functionality is added and working<BR>
