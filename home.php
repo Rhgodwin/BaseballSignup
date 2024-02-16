@@ -34,11 +34,15 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="welcome">
         <img src="anim.gif" alt="baseball" class="img1">
         <img src="anim.gif" alt="baseball" class="img2">
-        <h1>Annual Baseball Tech Tourney Signup Page</h1>
-
-        <marquee scrollamount ="10" width= "60%" direction = "right" onclick="stop">   <h2> Welcome back,
+      <h1>Annual Baseball Tech Tourney Signup </h1>
+          
+     <marquee scrollamount ="10" width= "60%" direction = "right" onclick="stop">   <h2> Welcome back,
             <?= $_SESSION['name'] ?>! Ready to play some baseball?
         </h2></marquee>
+
+
+
+
 
     </div>
 </header>
