@@ -1,4 +1,5 @@
 <?php
+
 // Session start
 session_start();
 require("dbFunctions.php");
@@ -6,6 +7,7 @@ require("dbFunctions.php");
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
+    
 }
 ?>
 <!DOCTYPE html>
@@ -30,12 +32,14 @@ if (!isset($_SESSION['loggedin'])) {
 <header> <!--This is the Welcome message and displays users name -->
 
     <div class="welcome">
-        <img src="baseball2.jpg" alt="baseball" class="img1">
-        <img src="baseball2.jpg" alt="baseball" class="img2">
+        <img src="anim.gif" alt="baseball" class="img1">
+        <img src="anim.gif" alt="baseball" class="img2">
         <h1>Annual Baseball Tech Tourney Signup Page</h1>
 
         <h2> Welcome back,
-            <?= $_SESSION['name'] ?>! Ready to play some baseball?
+            <?= $_SESSION['name']  ?>! Ready to play some baseball?
+         
+  
         </h2>
 
     </div>
@@ -47,6 +51,7 @@ if (!isset($_SESSION['loggedin'])) {
     <h4 style="text-align: left; padding-left: 5% ;">What team and position are you interested in?</h4>
     <div class=" checkbox" style="align-items: center; width: 35%;padding-left: 5%; flex-wrap: wrap;float: left;">
     <form action="dbFunctions.php" method="post">
+        
             <ul>
 
                 <fieldset class="fs2">
@@ -126,6 +131,7 @@ if (!isset($_SESSION['loggedin'])) {
             </button>
 
         </fieldset>
+        <div class = tableContainer>
         <table>
             <thead>
 
@@ -146,8 +152,9 @@ if (!isset($_SESSION['loggedin'])) {
                          to gather the data to fill the table-->
                <?php 
                     include_once('dbFunctions.php');
+                   
                     $con = new dbFun('localhost','root','','pwdb');
-                    
+           // $con ->Set_Playername($_SESSION['name']);
                     $result = $con->Get_Players_From_DB();?>
 
 <?php 
@@ -183,7 +190,7 @@ if (!isset($_SESSION['loggedin'])) {
     }
     ?>
      </tbody>
-        </table>
+        </table></div>
         <!--END OF Input Output sec-->
 
         <!--Buttons HELP where to place (function to deisplay team info in table I assume ?)-->

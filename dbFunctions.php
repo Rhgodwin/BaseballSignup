@@ -1,13 +1,15 @@
 <?php
-
+ob_start();
 class dbFun{
+    
     //private vars
     private $HostName;
     private $UserID;
     private $Password;
     private $DBName;
     private $Con;
-
+    private $name;
+    private $fuck;
     //constructor
     public function __construct($host = null, $uid = null, $pw = null, $db = null)
     {
@@ -25,24 +27,30 @@ class dbFun{
     {
         $this->Con->Close();
     }
-
+    
 //process for the form
     function ProcessRegistrationForm()
     {
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             //retrieve form data
+           // session_regenerate_id();
+            // $_SESSION['name'] == $_POST['playername'];
+            $name = $_SESSION['name'];          
            // $name = $_POST['username'];
             $team = $_POST['team'];
             $position = $_POST['position'];
+            
 
             $con = mysqli_connect("localhost", "root", "", "pwdb");
            
             $sql = "INSERT INTO players
-             ( `team`, `position`) 
+             (`playername`, `team`, `position`) 
             VALUES
-             ('$team','$position');";
+             ('$name','$team','$position');";
+              
           
+            
             if (mysqli_query($con, $sql)) {
 
                 
@@ -61,9 +69,9 @@ class dbFun{
 //start of insert functions (will need to fix this code)
 //to add the UID into player name. going to have to 
 //do more research
-public function Insert_PlayerName_Into_DB(){
+public function Insert_PlayerName_Into_DB($name){
     $con = mysqli_connect("localhost", "root", "", "pwdb");
-    $name = $_SESSION['name'];
+    
     $sql = "INSERT INTO `players.playername` VALUE $name";
 
     $result = mysqli_query($con, $sql);
@@ -93,8 +101,19 @@ public function display_player_for_Team($team){
     
 
 }
+public function Set_Playername($name){
+    $this->name = $name;
+}
+//function to check if the record exists before adding
+function recordExists($table, $where, $mysqli) {
+    $query = "SELECT * FROM `$table` WHERE $where";
+    $result = $mysqli->query($query);
 
-
+    if($result->num_rows > 0) {
+            return true; // The record(s) do exist
+    }
+    return false; // No record found
+}
 }
 //posty post method
 if  ($_SERVER["REQUEST_METHOD"] == "POST") {
