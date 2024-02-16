@@ -2,7 +2,6 @@
 
 session_start();
 
-
 // Connection ifno
 
 $DATABASE_HOST = 'localhost';
