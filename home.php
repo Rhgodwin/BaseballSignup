@@ -34,9 +34,9 @@ if (!isset($_SESSION['loggedin'])) {
         <img src="baseball2.jpg" alt="baseball" class="img2">
         <h1>Annual Baseball Tech Tourney Signup Page</h1>
 
-        <h2> Welcome back,
+     <marquee scrollamount ="10" width= "60%" direction = "right" onclick="stop">   <h2> Welcome back,
             <?= $_SESSION['name'] ?>! Ready to play some baseball?
-        </h2>
+        </h2></marquee>
 
     </div>
 </header>
