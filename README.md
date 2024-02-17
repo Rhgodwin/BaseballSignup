@@ -24,6 +24,7 @@ Improved Button Layout<br>
 JavaScript add so only one checkbox can be selected at a time<br>
 Retreival DB functions implemented and working!<BR>
 Added Baseball Images<br>
+Name is automatically added from login system into player database upon submission<br>
 ***********************WARNING**********************************<br>
 Login System has changed. Username is now First and Last name<br>
 Password is the same (test)<br>

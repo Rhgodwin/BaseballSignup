@@ -53,7 +53,7 @@ if (!isset($_SESSION['loggedin'])) {
     <h4 style="text-align: left; padding-left: 5% ;">What team and position are you interested in?</h4>
     <div class=" checkbox" style="align-items: center; width: 35%;padding-left: 5%; flex-wrap: wrap;float: left;">
     <form action="dbFunctions.php" method="post">
-        
+        <input type="hidden" name="dbname" value="<?= $_SESSION['name'];?>">
             <ul>
 
                 <fieldset class="fs2">

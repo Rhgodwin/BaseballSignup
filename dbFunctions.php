@@ -34,10 +34,9 @@ class dbFun{
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             //retrieve form data
-           // session_regenerate_id();
-            // $_SESSION['name'] == $_POST['playername'];
+          
            // $name = $_SESSION['name'];          
-           // $name = $_POST['username'];
+            $name = $_POST['dbname'];
             $team = $_POST['team'];
             $position = $_POST['position'];
             
@@ -45,9 +44,9 @@ class dbFun{
             $con = mysqli_connect("localhost", "root", "", "pwdb");
            
             $sql = "INSERT INTO players
-             ( `team`, `position`) 
+             (`playername`, `team`, `position`) 
             VALUES
-             ('$team','$position');";
+             ('$name','$team','$position');";
               
           
             
