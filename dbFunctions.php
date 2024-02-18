@@ -9,7 +9,7 @@ class dbFun{
     private $DBName;
     private $Con;
     private $name;
-    private $fuck;
+    
     //constructor
     public function __construct($host = null, $uid = null, $pw = null, $db = null)
     {
