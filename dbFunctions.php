@@ -51,12 +51,12 @@ class dbFun{
           
             
             if (mysqli_query($con, $sql)) {
-
+                header("Location: success.php");
                 
-                echo "<h1>You have been added to play in sports Tourney</h1>";
-                echo "<h1>Thanks for playing</h1>";
+            
             } else {
-                echo "Error in database. Registration failed" . mysqli_error($con);
+                echo "<h1>Error in database. Registration failed<br>
+                Please contact support</h1>" . mysqli_error($con);
 
               }
             mysqli_close($con);
@@ -65,19 +65,7 @@ class dbFun{
     }
 //get functions
 
-//start of insert functions (will need to fix this code)
-//to add the UID into player name. going to have to 
-//do more research
-public function Insert_PlayerName_Into_DB($name){
-    $con = mysqli_connect("localhost", "root", "", "pwdb");
-    
-    $sql = "INSERT INTO `players.playername` VALUE $name";
 
-    $result = mysqli_query($con, $sql);
-    mysqli_close($con);
-    return $result;
-
-}
 
 
 //DB retrieval functions
@@ -100,9 +88,7 @@ public function display_player_for_Team($team){
     
 
 }
-public function Set_Playername($name){
-    $this->name = $name;
-}
+
 //function to check if the record exists before adding
 function recordExists($table, $where, $mysqli) {
     $query = "SELECT * FROM `$table` WHERE $where";

@@ -248,3 +248,16 @@ button {
 	margin-right:150px;
 	border-radius:50%;
   }
+  #countdown{
+font-size:large;
+  }
+  .suHeadContainer{
+	justify-content: center;
+  }
+
+  .thanksImg{
+display:block;
+margin: 0 auto;
+
+  }
+

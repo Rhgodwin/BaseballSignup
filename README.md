@@ -30,6 +30,10 @@ Login System has changed. Username is now First and Last name<br>
 Password is the same (test)<br>
 ****************************************************************<br>
 
+Version Alpha .04
+-------------------
+Added in success page for successful submit<br>
+
 TODO
 -------------------
 Add more PHP DB functions for functionality<br>
