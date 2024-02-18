@@ -155,7 +155,7 @@ if (!isset($_SESSION['loggedin'])) {
                <?php 
                     include_once('dbFunctions.php');
                    
-                    $con = new dbFun('localhost','root','','pwdb');
+                    $con = new dbFun('localhost','dataman','data','pwdb');
            // $con ->Set_Playername($_SESSION['name']);
                     $result = $con->Get_Players_From_DB();?>
 
