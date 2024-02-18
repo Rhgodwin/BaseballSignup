@@ -70,7 +70,7 @@ class dbFun{
 
 //DB retrieval functions
 public function Get_Players_From_DB() {
-$con = mysqli_connect("localhost", "root", "", "pwdb");
+$con = mysqli_connect("localhost", "dataman", "data", "pwdb");
 
 $sql = "SELECT * FROM players";
 $result = mysqli_query($con, $sql);
@@ -103,7 +103,7 @@ function recordExists($table, $where, $mysqli) {
 //posty post method
 if  ($_SERVER["REQUEST_METHOD"] == "POST") {
  
-            $postmebaby = new dbFun("localhost", "root", "", "pwdb");
+            $postmebaby = new dbFun("localhost", "dataman", "data", "pwdb");
             $postmebaby->ProcessRegistrationForm();      
 
     }
