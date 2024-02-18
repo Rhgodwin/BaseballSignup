@@ -41,7 +41,7 @@ class dbFun{
             $position = $_POST['position'];
             
 
-            $con = mysqli_connect("localhost", "root", "", "pwdb");
+            $con = mysqli_connect("localhost", "dataman", "data", "pwdb");
            
             $sql = "INSERT INTO players
              (`playername`, `team`, `position`) 
@@ -79,7 +79,7 @@ return $result;
 }
 //Display only members with a certain team
 public function display_player_for_Team($team){
-    $con = mysqli_connect("localhost", "root", "", "pwdb");
+    $con = mysqli_connect("localhost", "dataman", "data", "pwdb");
     $sql = "SELECT team FROM players group by $team having count(*) >1";
     $result = mysqli_query($con, $sql);
 

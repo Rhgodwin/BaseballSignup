@@ -5,8 +5,8 @@ session_start();
 // Connection ifno
 
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
+$DATABASE_USER = 'dataman';
+$DATABASE_PASS = 'data';
 $DATABASE_NAME = 'pwdb';
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
