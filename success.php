@@ -20,7 +20,7 @@
         countdown.innerHTML = seconds;
         if (seconds <= 0){
             clearInterval(interval);
-            window.location.href = "http://localhost/home.php";
+            window.location.href = "home.php";
         }
     }
 
