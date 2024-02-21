@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+require_once("dbConnect.php");
 // Connection ifno
 
 $DATABASE_HOST = 'localhost';
@@ -14,6 +14,7 @@ if ( mysqli_connect_errno() ) {
 	// If failure to connect display error
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
+
 
 
 

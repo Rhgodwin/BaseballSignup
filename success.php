@@ -12,7 +12,7 @@
         <body>
             <div class="imgContainer"><img src="Thanks.gif" alt="Thanks" class ="thanksImg"></div>
 <script>
-    var seconds = 10;
+    var seconds = 5;
     var countdown = document.getElementById("countdown");
 
     function updateCountdown(){

@@ -2,7 +2,7 @@
 
 // Session start
 session_start();
-require("dbFunctions.php");
+require("dbConnect.php");
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
@@ -52,7 +52,7 @@ if (!isset($_SESSION['loggedin'])) {
 
     <h4 style="text-align: left; padding-left: 5% ;">What team and position are you interested in?</h4>
     <div class=" checkbox" style="align-items: center; width: 35%;padding-left: 5%; flex-wrap: wrap;float: left;">
-    <form action="dbFunctions.php" method="post">
+    <form action="regFormClass.php" method="post">
         <input type="hidden" name="dbname" value="<?= $_SESSION['name'];?>">
             <ul>
 
@@ -153,11 +153,11 @@ if (!isset($_SESSION['loggedin'])) {
                          Will have to have PHP code inserted with for loop
                          to gather the data to fill the table-->
                <?php 
-                    include_once('dbFunctions.php');
-                   
-                    $con = new dbFun('localhost','dataman','data','pwdb');
-           // $con ->Set_Playername($_SESSION['name']);
-                    $result = $con->Get_Players_From_DB();?>
+                    include_once('dbConnect.php');
+                    include_once('teamsClass.php');
+                    $con = new dbConnect('localhost','dataman','data','pwdb');
+                    $sql = new teamsClass();
+                    $result = $sql->Get_Players_From_DB();?>
 
 <?php 
           

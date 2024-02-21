@@ -34,6 +34,13 @@ Version Alpha .04
 -------------------
 Added in success page for successful submit<br>
 
+Version Alpha .05
+-------------------
+Major rework of code to in Class Structure
+Added new classes (regFormClass, teamClass, and playersClass)
+Change dbFun to dbConnect and only handles db connections
+
+
 TODO
 -------------------
 Add more PHP DB functions for functionality<br>
