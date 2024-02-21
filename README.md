@@ -41,6 +41,7 @@ Added new classes (regFormClass, teamClass, and playersClass)<br>
 Change dbFun to dbConnect and only handles db connections<br>
 Added code to detect if a player has already signed up<br>
 added sorry.php<br>
+added displayTeamTable.php<br>
 
 TODO
 -------------------
