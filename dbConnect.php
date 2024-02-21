@@ -9,10 +9,12 @@ class dbConnect{
     private $DBName;
     private $Con;
     private $name;
+    public $mysqli;
     
     //constructor
     public function __construct($host = null, $uid = null, $pw = null, $db = null)
     {
+        $this->mysqli = new mysqli($host, $uid, $pw, $db);
         $this->HostName = $host;
         $this->UserID = $uid;
         $this->Password = $pw;

@@ -39,12 +39,14 @@ Version Alpha .05
 Major rework of code to in Class Structure<br>
 Added new classes (regFormClass, teamClass, and playersClass)<br>
 Change dbFun to dbConnect and only handles db connections<br>
-
+Added code to detect if a player has already signed up<br>
+added sorry.php<br>
 
 TODO
 -------------------
 Add more PHP DB functions for functionality<br>
 Add addtional improve PHP code for back end<br>
+BUG with submit where clicking on the button will allow add<br>
 
 Known Bugs
 --------------------------------
