@@ -122,9 +122,10 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="Data">
         <fieldset class="buttons-fieldset">
             <legend>Display By Team</legend>
-            <button onclick="return popup('displayTeamTable.php')
-            <button>
-                Cubs
+            <button onclick="return popup('displayTeamTable.php')">Cougars
+        
+            </button>
+               <button> Cubs
             </button>
             <button>
                 Jaguars
