@@ -36,9 +36,9 @@ Added in success page for successful submit<br>
 
 Version Alpha .05
 -------------------
-Major rework of code to in Class Structure
-Added new classes (regFormClass, teamClass, and playersClass)
-Change dbFun to dbConnect and only handles db connections
+Major rework of code to in Class Structure<br>
+Added new classes (regFormClass, teamClass, and playersClass)<br>
+Change dbFun to dbConnect and only handles db connections<br>
 
 
 TODO
