@@ -7,7 +7,7 @@ require("dbConnect.php");
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
-    
+
 }
 ?>
 <!DOCTYPE html>
@@ -34,11 +34,13 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="welcome">
         <img src="anim.gif" alt="baseball" class="img1">
         <img src="anim.gif" alt="baseball" class="img2">
-      <h1>Annual Baseball Tech Tourney Signup </h1>
-          
-     <marquee scrollamount ="10" width= "60%" direction = "right" onclick="stop">   <h2> Welcome back,
-            <?= $_SESSION['name'] ?>! Ready to play some baseball?
-        </h2></marquee>
+        <h1>Annual Baseball Tech Tourney Signup </h1>
+
+        <marquee scrollamount="10" width="60%" direction="right" onclick="stop">
+            <h2> Welcome back,
+                <?= $_SESSION['name'] ?>! Ready to play some baseball?
+            </h2>
+        </marquee>
 
 
 
@@ -52,9 +54,9 @@ if (!isset($_SESSION['loggedin'])) {
 
     <h4 style="text-align: left; padding-left: 5% ;">What team and position are you interested in?</h4>
     <div class=" checkbox" style="align-items: center; width: 35%;padding-left: 5%; flex-wrap: wrap;float: left;">
-    <form action="regFormClass.php" method="post">
-        <input type="hidden" name="dbname" value="<?= $_SESSION['name']?>">
-      
+        <form action="regFormClass.php" method="post">
+            <input type="hidden" name="dbname" value="<?= $_SESSION['name'] ?>">
+
             <ul>
 
                 <fieldset class="fs2">
@@ -113,16 +115,14 @@ if (!isset($_SESSION['loggedin'])) {
         </ul>
 
         </fieldset>
-        
+
 
     </div>
     <!--This Table is  a place holder and the team buttens need better placement (work in progress)-->
     <div class="Data">
         <fieldset class="buttons-fieldset">
             <legend>Display By Team</legend>
-            <button>
-                Cougars
-            </button>
+            <button onclick="return popup('displayTeamTable.php')
             <button>
                 Cubs
             </button>
@@ -134,66 +134,48 @@ if (!isset($_SESSION['loggedin'])) {
             </button>
 
         </fieldset>
-        <div class = tableContainer>
-        <table>
-            <thead>
+        <div class=tableContainer>
+            <table>
+                <thead>
 
-                <tr>
-                    <th colspan="3">Current Team Roster</th>
-                <tr>
-                    <th>Player Name</th>
-                    <th>Current Team</th>
-                    <th>Position</th>
-                </tr>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Below to next comment line will need to be restructed 
+                    <tr>
+                        <th colspan="3">Current Team Roster</th>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Current Team</th>
+                        <th>Position</th>
+                    </tr>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Below to next comment line will need to be restructed 
                          for PHP to fill the table from the database
                          This is simply test data for the skeleton framework
                          Will have to have PHP code inserted with for loop
                          to gather the data to fill the table-->
-               <?php 
+                    <?php
                     include_once('dbConnect.php');
                     include_once('teamsClass.php');
-                    $con = new dbConnect('localhost','dataman','data','pwdb');
+                    $con = new dbConnect('localhost', 'dataman', 'data', 'pwdb');
                     $sql = new teamsClass();
-                    $result = $sql->Get_Players_From_DB();?>
+                    $result = $sql->Get_Players_From_DB(); ?>
 
-<?php 
-          
-                while($row = mysqli_fetch_array($result)){
-            $name = $row['playername'];
-            $team = $row['team'];
-            $position = $row['position'];
-            displayRows($name,$team,$position);
-                }
+                    <?php
 
-                
-                
+                    while ($row = mysqli_fetch_array($result)) {
+                        $name = $row['playername'];
+                        $team = $row['team'];
+                        $position = $row['position'];
+                        $sql->displayRows($name, $team, $position);
+                    }
 
-        function displayRows($name, $team, $pos)
-    {
-        ?>
 
-        <tr>
-            <td>
-                <?php echo $name; ?>
-            </td>
-            <td>
-                <?php echo $team; ?>
-            </td>
-            <td>
-                <?php echo $pos; ?>
-            </td></tr>
-    
-                <!-- End of test data -->
-            
-<?php
-    }
-    ?>
-     </tbody>
-        </table></div>
+
+
+                    ?>
+                </tbody>
+            </table>
+        </div>
         <!--END OF Input Output sec-->
 
         <!--Buttons HELP where to place (function to deisplay team info in table I assume ?)-->
@@ -214,7 +196,14 @@ if (!isset($_SESSION['loggedin'])) {
                 let state = e.target.checked; // save state of changed checkbox
                 boxes2.forEach(b => b.checked = false); // clear all checkboxes
                 e.target.checked = state; // restore state of changed checkbox
-            }      
+            }
+
+            function popup(url) {
+                newwindow = window.open(url, 'Team Table', 'height=400px,width=750px,screenX=400,screenY=350');
+                if (window.focus) { newwindow.focus() }
+                return false;
+            }
+         
         </script>
 </body>
 
