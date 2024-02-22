@@ -25,16 +25,13 @@ session_start();
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Below to next comment line will need to be restructed 
-                         for PHP to fill the table from the database
-                         This is simply test data for the skeleton framework
-                         Will have to have PHP code inserted with for loop
-                         to gather the data to fill the table-->
+                   
                     <?php
                     include_once('dbConnect.php');
                     include_once('teamsClass.php');
-                    $con = new dbConnect('localhost', 'dataman', 'data', 'pwdb');
-                    $sql = new teamsClass();
+                    $con = new dbConnect('localhost', 'dataman', 'data', 'pwdb'); //connect to db
+                    $sql = new teamsClass(); //var for team class
+                  
                     $result = $sql->display_players_for_Teams('cubs'); ?>
 
                     <?php
@@ -43,7 +40,7 @@ session_start();
                         $name = $row['playername'];
                         $team = $row['team'];
                         $position = $row['position'];
-                
+                      
                     
                         $sql->displayRows($name, $team, $position);
                     }

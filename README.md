@@ -2,6 +2,9 @@
 Web based sign-up application for a company baseball league
 Group project members are: Rhett Godwin, Zach Butler, and Cat Kramka
 
+Changelog
+-------------
+
 Version Alpha 0.1
 -----------------
 Login system coded and working<br>
@@ -41,7 +44,14 @@ Added new classes (regFormClass, teamClass, and playersClass)<br>
 Change dbFun to dbConnect and only handles db connections<br>
 Added code to detect if a player has already signed up<br>
 added sorry.php<br>
-added displayTeamTable.php<br>
+<s>added displayTeamTable.php</s><br>
+
+Version Alpha .06
+-------------------
+Admin login working<br>
+Team buttons working(Implementation needs to be better)<br>
+Added multiple pages for team display (needs better implentation)<br>
+Almost feature complete. Will move to beta soon!!!!!!!!!!!!!!<br>
 
 TODO
 -------------------

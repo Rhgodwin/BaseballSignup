@@ -3,6 +3,7 @@
 // Session start
 session_start();
 require("dbConnect.php");
+
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
@@ -20,7 +21,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
 </head>
-<!--This is the navigation area for Corp nam and Profile/Logout links -->
+<!--navigation area for Corp nam and Profile/Logout links -->
 <nav class="navtop">
     <div>
         <h1>Innovative Soulutions Corporation</h1>
@@ -29,7 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
 </nav>
 
-<header> <!--This is the Welcome message and displays users name -->
+<header> <!--welcome message -->
 
     <div class="welcome">
         <img src="anim.gif" alt="baseball" class="img1">
@@ -50,6 +51,7 @@ if (!isset($_SESSION['loggedin'])) {
 </header>
 
 <body>
+
     <!--This is the form area to get input from user and display output  -->
 
     <h4 style="text-align: left; padding-left: 5% ;">What team and position are you interested in?</h4>
@@ -122,90 +124,99 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="Data">
         <fieldset class="buttons-fieldset">
             <legend>Display By Team</legend>
-            <button onclick="return popup('displayTeamTable.php')">Cougars
-        
+            <button onclick="return mypopup('CougarTeam.php')">Cougars
+
             </button>
-               <button> Cubs
+            <button onclick="return mypopup('CubsTeam.php')"> Cubs
             </button>
-            <button>
+            <button onclick="return mypopup('JaguarsTeam.php')">
                 Jaguars
             </button>
-            <button>
+            <button onclick="return mypopup('RedsTeam.php')">
                 Reds
             </button>
 
         </fieldset>
-        <div class=tableContainer>
-            <table>
-                <thead>
 
-                    <tr>
-                        <th colspan="3">Current Team Roster</th>
-                    <tr>
-                        <th>Player Name</th>
-                        <th>Current Team</th>
-                        <th>Position</th>
-                    </tr>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Below to next comment line will need to be restructed 
+
+    </div>
+    <div class=tableContainer>
+        <table>
+            <thead>
+
+                <tr>
+                    <th colspan="3">Current Team Roster</th>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Current Team</th>
+                    <th>Position</th>
+                </tr>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Below to next comment line will need to be restructed 
                          for PHP to fill the table from the database
                          This is simply test data for the skeleton framework
                          Will have to have PHP code inserted with for loop
                          to gather the data to fill the table-->
-                    <?php
-                    include_once('dbConnect.php');
-                    include_once('teamsClass.php');
-                    $con = new dbConnect('localhost', 'dataman', 'data', 'pwdb');
-                    $sql = new teamsClass();
-                    $result = $sql->Get_Players_From_DB(); ?>
+                <?php
+                include_once('dbConnect.php');
+                include_once('teamsClass.php');
+                $con = new dbConnect('localhost', 'dataman', 'data', 'pwdb');
+                $sql = new teamsClass();
+                $result = $sql->Get_Players_From_DB(); ?>
 
-                    <?php
+                <?php
 
-                    while ($row = mysqli_fetch_array($result)) {
-                        $name = $row['playername'];
-                        $team = $row['team'];
-                        $position = $row['position'];
-                        $sql->displayRows($name, $team, $position);
-                    }
-
-
+                while ($row = mysqli_fetch_array($result)) {
+                    $name = $row['playername'];
+                    $team = $row['team'];
+                    $position = $row['position'];
+                    $sql->displayRows($name, $team, $position);
+                }
 
 
-                    ?>
-                </tbody>
-            </table>
-        </div>
-        <!--END OF Input Output sec-->
 
-        <!--Buttons HELP where to place (function to deisplay team info in table I assume ?)-->
 
-        <script>
-            let boxes = document.querySelectorAll("input[id=ckbox1]");
-            let boxes2 = document.querySelectorAll("input[id=ckbox2]")
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <!--END OF Input Output sec-->
 
-            boxes.forEach(b => b.addEventListener("change", tick1));
-            boxes2.forEach(b => b.addEventListener("change", tick2));
-            function tick1(e) {
-                let state = e.target.checked; // save state of changed checkbox
-                boxes.forEach(b => b.checked = false); // clear all checkboxes
-                e.target.checked = state; // restore state of changed checkbox
-            }
+    <!--Buttons HELP where to place (function to deisplay team info in table I assume ?)-->
 
-            function tick2(e) {
-                let state = e.target.checked; // save state of changed checkbox
-                boxes2.forEach(b => b.checked = false); // clear all checkboxes
-                e.target.checked = state; // restore state of changed checkbox
-            }
+    <script>
+        let boxes = document.querySelectorAll("input[id=ckbox1]");
+        let boxes2 = document.querySelectorAll("input[id=ckbox2]")
 
-            function popup(url) {
-                newwindow = window.open(url, 'Team Table', 'height=400px,width=750px,screenX=400,screenY=350');
-                if (window.focus) { newwindow.focus() }
-                return false;
-            }
-         
-        </script>
+        boxes.forEach(b => b.addEventListener("change", tick1));
+        boxes2.forEach(b => b.addEventListener("change", tick2));
+        function tick1(e) {
+            let state = e.target.checked; // save state of changed checkbox
+            boxes.forEach(b => b.checked = false); // clear all checkboxes
+            e.target.checked = state; // restore state of changed checkbox
+        }
+
+        function tick2(e) {
+            let state = e.target.checked; // save state of changed checkbox
+            boxes2.forEach(b => b.checked = false); // clear all checkboxes
+            e.target.checked = state; // restore state of changed checkbox
+        }
+
+        function popup(url) {
+            newwindow = window.open(url, 'name', 'height=400px,width=750px,screenX=200,screenY=350');
+            if (window.focus) { newwindow.focus() }
+            return false;
+        }
+
+        function mypopup(url) {
+            mywindow = window.open(url, "mywindow", "height=500,width=900,left=1000,top=1000,resizable=no,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no, status=no");
+            mywindow.moveTo(1250, 450);
+        }
+
+
+    </script>
 </body>
 
 </html>

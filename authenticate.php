@@ -25,7 +25,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 }
 
 // Prepare our SQL, preparing the SQL statement to prevent SQL injection attacks.
-if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id, password, isAdmin FROM accounts WHERE username = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
@@ -33,7 +33,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	$stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password);
+        $stmt->bind_result($id, $password, $isAdmin);
         $stmt->fetch();
         // Account exists, now we verify the password.
         // Note: WARNING using plain passwords for ease of use. In future you hashed valued
@@ -44,8 +44,12 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('location: home.php');
+            if ($isAdmin){
+            header('location: admin.php');
         } else {
+
+            header('location: home.php');
+        }
             // Incorrect password
             echo 'Incorrect username and/or password!';
         }
