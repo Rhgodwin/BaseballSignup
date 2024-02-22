@@ -60,7 +60,12 @@ Added in a new DB connection method. Going to convert everything to new method.<
 Leaving in old method for now<br>
 Added in security fixes<br>
 Updated Database. (A new import will be required/or a new column added)<br>
-Almost feature complete.<br>
+Fixed Edit function (working now)<br>
+<strong>FEATURE COMPLETE HAS BEEN ACHIEVE AT ALPHA .07!!!!</Strong><br>
+
+Version Beta .01
+------------------
+
 
 TODO
 -------------------

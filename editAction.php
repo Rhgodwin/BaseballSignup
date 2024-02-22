@@ -14,8 +14,8 @@ if (isset($_POST['update'])) {
 	// Escape special characters in a string for use in an SQL statement
 	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
-	$age = mysqli_real_escape_string($mysqli, $_POST['team']);
-	$email = mysqli_real_escape_string($mysqli, $_POST['position']);	
+	$team = mysqli_real_escape_string($mysqli, $_POST['team']);
+	$position = mysqli_real_escape_string($mysqli, $_POST['position']);	
 	
 	// Check for empty fields
 	if (empty($name) || empty($team) || empty($position)) {
@@ -36,6 +36,6 @@ if (isset($_POST['update'])) {
 		
 		// Display success message
 		echo "<p><font color='green'>Data updated successfully!</p>";
-		echo "<a href='index.php'>View Result</a>";
+		echo "<a href='admin.php'>View Result</a>";
 	}
 }
