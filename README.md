@@ -81,5 +81,5 @@ Known Bugs
 <s>Adds an empty $_POST on login</s>(BUG SQUASHED)<br>
 
 *******************************************************************<br>
-Will enter Beta Builds when all functionality is added and working<BR>
+Will enter RC Builds when all core feature bugs are squashed!<BR>
 ********************************************************************<br>
