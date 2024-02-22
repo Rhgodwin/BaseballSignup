@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin']) || !isset($_SESSION['isAdmin']) !== TRUE ) {
+    header('Location: logout.php');
+    exit;
+
+} ?>
 <html>
 <head>
 	<title>Add Data</title>

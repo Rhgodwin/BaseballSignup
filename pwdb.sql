@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 28, 2024 at 04:44 PM
+-- Generation Time: Feb 22, 2024 at 08:02 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -33,15 +33,19 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `isAdmin` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
-(1, 'test', 'test', 'test@test.com');
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `isAdmin`) VALUES
+(1, 'Rhett Godwin', 'test', 'Rhett@test.com', 0),
+(3, 'Zach Butler', 'test', 'zach@test.com', 0),
+(4, 'Cat Kramka', 'test', 'Cat@test.com', 0),
+(5, 'admin', 'admin', 'admin@test.com', 1);
 
 -- --------------------------------------------------------
 
@@ -56,14 +60,17 @@ CREATE TABLE IF NOT EXISTS `players` (
   `team` varchar(255) NOT NULL,
   `position` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `players`
 --
 
 INSERT INTO `players` (`id`, `playername`, `team`, `position`) VALUES
-(1, 'Rhett Godwin', 'Jaguars', 'First Base');
+(73, 'Zach Butler', 'Cougars', 'Left Field'),
+(74, 'Cat Kramka', 'Cubs', 'Second Base'),
+(112, 'Rhett Godwin', 'Cougars', 'Short Stop'),
+(118, 'Rhett godwin', 'Jaguars', 'Left Field');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

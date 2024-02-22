@@ -58,7 +58,9 @@ Version Alpha .07
 Added Database admin functions<br>
 Added in a new DB connection method. Going to convert everything to new method.<br>
 Leaving in old method for now<br>
-Almost feature complete.
+Added in security fixes<br>
+Updated Database. (A new import will be required/or a new column added)<br>
+Almost feature complete.<br>
 
 TODO
 -------------------

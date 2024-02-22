@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['loggedin']) || !isset($_SESSION['isAdmin']) !== TRUE ) {
+    header('Location: logout.php');
+    exit;
+
+}
+
+
 // Include the database connection file
 require_once("newDBconnect.php");
 
