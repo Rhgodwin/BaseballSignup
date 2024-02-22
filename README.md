@@ -65,9 +65,9 @@ TODO
 Add more PHP DB functions for functionality<br>
 Add addtional improve PHP code for back end<br>
 BUG with submit where clicking on the button will allow add<br>
-Tons of security fixes. 
-Overhaul the dbconnection system. 
-Add in a registration system *Optional feature*
+Tons of security fixes. <br> 
+Overhaul the dbconnection system. <br> 
+Add in a registration system *Optional feature*<br>
 
 Known Bugs
 --------------------------------
