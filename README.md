@@ -53,11 +53,21 @@ Team buttons working(Implementation needs to be better)<br>
 Added multiple pages for team display (needs better implentation)<br>
 Almost feature complete. Will move to beta soon!!!!!!!!!!!!!!<br>
 
+Version Alpha .07
+----------------------
+Added Database admin functions<br>
+Added in a new DB connection method. Going to convert everything to new method.<br>
+Leaving in old method for now<br>
+Almost feature complete.
+
 TODO
 -------------------
 Add more PHP DB functions for functionality<br>
 Add addtional improve PHP code for back end<br>
 BUG with submit where clicking on the button will allow add<br>
+Tons of security fixes. 
+Overhaul the dbconnection system. 
+Add in a registration system *Optional feature*
 
 Known Bugs
 --------------------------------
