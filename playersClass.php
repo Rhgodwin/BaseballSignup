@@ -1,5 +1,5 @@
 <?php
-require("dbConnect.php");
+require("newDBconnect.php");
 class playersClass
 {
 
@@ -14,10 +14,9 @@ class playersClass
 
     function recordExists($team, $position)
     {
-
-        $con = new dbConnect("localhost", "dataman", "data", "pwdb");
-        $query = "SELECT * FROM `players` WHERE `team` = '$team' AND `position` = '$position'";
-        $result = $con->mysqli->query($query);
+        //code change to prevent bobby tables
+        $con = mysqli_connect("localhost", "dataman", "data", "pwdb");
+        $result = $con->execute_query("SELECT * FROM `players` WHERE `team` = '$team' AND `position` = '$position'");
         if ($result->num_rows > 0)  {
             return true; //record exists
         }

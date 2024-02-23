@@ -27,9 +27,9 @@ session_start();
                 <tbody>
                    
                     <?php
-                    include_once('dbConnect.php');
+                    include_once('newDBconnect.php');
                     include_once('teamsClass.php');
-                    $con = new dbConnect('localhost', 'dataman', 'data', 'pwdb'); //connect to db
+                    $con = mysqli_connect('localhost', 'dataman', 'data', 'pwdb'); //connect to db
                     $sql = new teamsClass(); //var for team class
                   
                     $result = $sql->display_players_for_Teams('Jaguars'); ?>

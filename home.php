@@ -2,7 +2,7 @@
 
 // Session start
 session_start();
-require("dbConnect.php");
+
 
 // If the user is not logged in redirect to the login page...
 if (!isset($_SESSION['loggedin'])) {
@@ -160,9 +160,9 @@ if (!isset($_SESSION['loggedin'])) {
                          Will have to have PHP code inserted with for loop
                          to gather the data to fill the table-->
                 <?php
-                include_once('dbConnect.php');
+                include_once('newDBconnect.php');
                 include_once('teamsClass.php');
-                $con = new dbConnect('localhost', 'dataman', 'data', 'pwdb');
+                $con = mysqli_connect('localhost', 'dataman', 'data', 'pwdb');
                 $sql = new teamsClass();
                 $result = $sql->Get_Players_From_DB(); ?>
 

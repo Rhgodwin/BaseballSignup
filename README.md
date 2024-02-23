@@ -65,21 +65,24 @@ Fixed Edit function (working now)<br>
 
 Version Beta .01
 ------------------
+Implmented new database connection system<BR>
+Security update to prevent SQL injection attacks<br>
+*yes it was possible to be bobby-tables. A little embarrased by that*<br>
 
 
 TODO
 -------------------
-Add more PHP DB functions for functionality<br>
-Add addtional improve PHP code for back end<br>
+<s>Add more PHP DB functions for functionality<s><br>
+<s>Add addtional improve PHP code for back end<s><br>
 BUG with submit where clicking on the button will allow add<br>
-Tons of security fixes. <br> 
-Overhaul the dbconnection system. <br> 
+<s>Tons<s>A few more security fixes. <br> 
+<s>Overhaul the dbconnection system.<s> <br> 
 Add in a registration system *Optional feature*<br>
 
 Known Bugs
 --------------------------------
 <s>Adds an empty $_POST on login</s>(BUG SQUASHED)<br>
-
+Allows you to submit an empty $_POST on submit to team<br>
 *******************************************************************<br>
 Will enter RC Builds when all core feature bugs are squashed!<BR>
 ********************************************************************<br>
