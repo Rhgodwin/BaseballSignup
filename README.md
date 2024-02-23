@@ -68,6 +68,7 @@ Version Beta .01
 Implmented new database connection system<BR>
 Security update to prevent SQL injection attacks<br>
 *yes it was possible to be bobby-tables. A little embarrased by that*<br>
+Added Message for when a team is empty<br>
 
 
 TODO

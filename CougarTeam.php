@@ -35,7 +35,7 @@ session_start();
                     $result = $sql->display_players_for_Teams('cougars'); ?>
 
                     <?php
-
+                    if ($result && $result->num_rows > 0) {
                     while ($row = mysqli_fetch_array($result)) {
                         $name = $row['playername'];
                         $team = $row['team'];
@@ -44,5 +44,8 @@ session_start();
                     
                         $sql->displayRows($name, $team, $position);
                     }
+                }else{
+                    echo "<h1 style='color:red;'>Team Cougars is Empty<h1>";
+                }
 ?>
         </body></html>
