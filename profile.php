@@ -56,5 +56,6 @@ $stmt->close();
 				</table>
 			</div>
 		</div>
+		<a href="home.php">Return Home</a>
 	</body>
 </html>
