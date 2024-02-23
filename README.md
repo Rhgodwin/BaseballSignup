@@ -72,11 +72,11 @@ Security update to prevent SQL injection attacks<br>
 
 TODO
 -------------------
-<s>Add more PHP DB functions for functionality<s><br>
-<s>Add addtional improve PHP code for back end<s><br>
+<s>Add more PHP DB functions for functionality</s><br>
+<s>Add addtional improve PHP code for back end</s><br>
 BUG with submit where clicking on the button will allow add<br>
-<s>Tons<s>A few more security fixes. <br> 
-<s>Overhaul the dbconnection system.<s> <br> 
+<s>Tons</s>A few more security fixes. <br> 
+<s>Overhaul the dbconnection system.</s> <br> 
 Add in a registration system *Optional feature*<br>
 
 Known Bugs
