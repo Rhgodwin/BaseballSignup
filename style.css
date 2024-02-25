@@ -263,3 +263,23 @@ margin: 0 auto;
 a {
 	font-size:larger;
 }
+#newBtn{
+	
+	text-align: center;
+    width:100%;
+	height:55px;
+	color:white;
+	background-color: #add8e6;
+	outline:none !important;
+	box-shadow: none !important;
+
+
+
+}
+#newBtn:hover{
+	background-color: #2f3947;
+}
+#confirmLabel{
+	display:flex;
+	
+}

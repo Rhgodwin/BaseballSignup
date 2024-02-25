@@ -15,6 +15,6 @@ $id = $_GET['id'];
 
 // Delete row from the database table
 $result = mysqli_query($mysqli, "DELETE FROM players WHERE id = $id");
-
+$result2 = mysqli_query($mysqli,"DELETE FROM accounts WHERE id= $id");
 // Redirect to the main display page 
 header("Location:admin.php");

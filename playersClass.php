@@ -1,5 +1,5 @@
 <?php
-require("newDBconnect.php");
+
 class playersClass
 {
 
