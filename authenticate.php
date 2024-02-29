@@ -5,7 +5,6 @@ require("newDBconnect.php");
 
 
 
-
 // check if the data from the login form was submitted, isset() will check if the data exists.
 if ( !isset($_POST['username'], $_POST['password']) ) {
 	// Could not get the data that should have been sent.
@@ -38,12 +37,15 @@ if ($stmt = $mysqli->prepare('SELECT id, password, isAdmin FROM accounts WHERE u
 
             header('location: home.php');
         }
+        exit();
+    } else {
             // Incorrect password
-            echo 'Incorrect username and/or password!';
+
+            echo "<script>alert('Incorrect Password'); window.location.href='index.html';</script>";
         }
     } else {
         // Incorrect username
-        echo 'Incorrect username and/or password!';
+        echo "<script>alert('Incorrect Username'); window.location.href='index.html';</script>";
     }
 
 	$stmt->close();

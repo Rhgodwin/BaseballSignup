@@ -1,5 +1,6 @@
 <?php
-require_once("playersClass.php");
+require("playersClass.php");
+
 class regFormClass {
 
 public function __construct() {
@@ -11,10 +12,7 @@ public function __destruct() {
 function ProcessRegistrationForm()
 {
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        //retrieve form data
-      
-       // $name = $_SESSION['name'];          
+        //retrieve form data          
         $name = $_POST['dbname'];
         $team = $_POST['team'];
         $position = $_POST['position'];
@@ -25,7 +23,7 @@ function ProcessRegistrationForm()
 
         if ($pclass->recordExists($team, $position)) {
             //if a record is found code goes in here
-            echo "<script>alert('The position was taken by $name playing on the $team on position $position');</script>";  
+            
             header("location: sorry.php");
         } else {
             # code...
@@ -50,18 +48,19 @@ function ProcessRegistrationForm()
          
         mysqli_close($con);
         }
+
+
     }
-
-
 }
-}
-
 
 
 
 //posty post method to grab the posty post variable
-if  ($_SERVER["REQUEST_METHOD"] == "POST") {
+if  ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['dbname']) {
  
     $postmebaby = new regFormClass();
     $postmebaby->ProcessRegistrationForm();      
-}
+} 
+
+
+

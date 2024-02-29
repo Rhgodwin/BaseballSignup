@@ -72,6 +72,18 @@ Added Message for when a team is empty<br>
 Added registration system(Not working ATM needs php code added)<br>
 Added functions for manipulation of Account database
 <i>Change/edit/delete username,password,email</i><br>
+Added password matching function for new Employee Registration<br>
+
+Version Beta .02
+------------------
+<strong>Feature Freeze</strong><br>
+Registration system added (Working)<br>
+Updated password detection system<br>
+Added in new system for detecting if a employee exists<br>
+
+
+
+
 
 
 TODO

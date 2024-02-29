@@ -1,4 +1,5 @@
 <?php
+
 $databaseHost = 'localhost';
 $databaseName = 'pwdb';
 $databaseUsername = 'dataman';

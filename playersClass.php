@@ -25,7 +25,15 @@ class playersClass
       return false; //does not exist
 
     }
+    
+    function empExists($name){
+        $con = mysqli_connect("localhost", "dataman", "data", "pwdb");
+        $result = $con->execute_query("SELECT * FROM `accounts` WHERE `username` = '$name'");
+        if ($result->num_rows > 0) {
+            return true;
+    }
+    return false;
 }
 
-
+}
 ?>
