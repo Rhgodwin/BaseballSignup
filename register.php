@@ -35,6 +35,9 @@
     </head>
     <body>
         <script>
+            
+            // function to check if conPassword == newPassword
+            // if doesn't match display error message
             function check (){
                 var input = document.getElementById('conPassword');
                 if (input.value != document.getElementById('newPassword').value){

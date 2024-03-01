@@ -21,7 +21,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
 
 </head>
-<!--navigation area for Corp nam and Profile/Logout links -->
+<!--Navigation div -->
 <nav class="navtop">
     <div>
         <h1>Innovative Soulutions Corporation</h1>
@@ -52,7 +52,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body>
 
-    <!--This is the form area to get input from user and display output  -->
+    <!--Form data to get input and output -->
 
     <h4 style="text-align: left; padding-left: 5% ;">What team and position are you interested in?</h4>
     <div class=" checkbox" style="align-items: center; width: 35%;padding-left: 5%; flex-wrap: wrap;float: left;">
@@ -120,7 +120,7 @@ if (!isset($_SESSION['loggedin'])) {
 
 
     </div>
-    <!--This Table is  a place holder and the team buttens need better placement (work in progress)-->
+    <!-- table div section -->
     <div class="Data">
         <fieldset class="buttons-fieldset">
             <legend>Display By Team</legend>
@@ -154,12 +154,11 @@ if (!isset($_SESSION['loggedin'])) {
                 </tr>
             </thead>
             <tbody>
-                <!-- Below to next comment line will need to be restructed 
-                         for PHP to fill the table from the database
-                         This is simply test data for the skeleton framework
-                         Will have to have PHP code inserted with for loop
-                         to gather the data to fill the table-->
+                
                 <?php
+
+                // data base connection and display rows
+                // results are pulled from the get players function
                 include_once('newDBconnect.php');
                 include_once('teamsClass.php');
                 $con = mysqli_connect('localhost', 'dataman', 'data', 'pwdb');
@@ -182,9 +181,7 @@ if (!isset($_SESSION['loggedin'])) {
             </tbody>
         </table>
     </div>
-    <!--END OF Input Output sec-->
-
-    <!--Buttons HELP where to place (function to deisplay team info in table I assume ?)-->
+   
 
     <script>
         let boxes = document.querySelectorAll("input[id=ckbox1]");

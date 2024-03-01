@@ -48,7 +48,7 @@ class teamsClass {
                 </td>
             </tr>
 
-            <!-- End of test data -->
+         
 
             <?php
         }

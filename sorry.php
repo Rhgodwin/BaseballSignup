@@ -13,6 +13,9 @@
         <body>
             <div class="imgContainer"><img src="charliebrown.gif" alt="Thanks" class ="thanksImg"></div>
 <script>
+
+    //countdown function when seconds reaches 0 continue on 
+    //to home.php
     var seconds = 6;
     var countdown = document.getElementById("countdown");
 

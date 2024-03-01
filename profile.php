@@ -1,7 +1,7 @@
 <?php
 // session start
 session_start();
-// If the user is not logged in redirect to the login page...
+// Validation for user is logged in
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
@@ -16,7 +16,7 @@ if (mysqli_connect_errno()) {
 }
 // no passwd in $session so get it from db
 $stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
-// In this case we can use the account ID to get the account info.
+// Use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
 $stmt->bind_result($password, $email);

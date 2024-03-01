@@ -13,7 +13,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 
 // Prepare our SQL, preparing the SQL statement to prevent SQL injection attacks.
 if ($stmt = $mysqli->prepare('SELECT id, password, isAdmin FROM accounts WHERE username = ?')) {
-	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+	// Bind parameters (s = string, i = int, b = blob, etc)
 	$stmt->bind_param('s', $_POST['username']);
 	$stmt->execute();
 	// Store the result so the result to see if it is in database
@@ -23,10 +23,10 @@ if ($stmt = $mysqli->prepare('SELECT id, password, isAdmin FROM accounts WHERE u
         $stmt->bind_result($id, $password, $isAdmin);
         $stmt->fetch();
         // Account exists, now we verify the password.
-        // Note: WARNING using plain passwords for ease of use. In future you hashed valued
+        // Note: WARNING using plain passwords for ease of use. In future use hashed valued!!!
         if ($_POST['password'] === $password) {
             // Success! User has logged-in!
-            // Create sessions, so we know the user is logged in. Think of session like a cookie. 
+            // Create sessions, so we know the user is logged in. 
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
