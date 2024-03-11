@@ -76,11 +76,12 @@ Added password matching function for new Employee Registration<br>
 
 Version Beta .06
 ------------------
+**Skipped a few numbering revisions. Only a few bugs left before RC milestone<br>
 <strong>Feature Freeze</strong><br>
 Registration system added (Working)<br>
 Updated password detection system<br>
 Added in new system for detecting if a employee exists<br>
-**Skipped a few numbering revisions. Only a few bugs left before RC milestone<br>
+
 
 
 
@@ -93,14 +94,14 @@ TODO
 BUG with submit where clicking on the button will allow add<br>
 <s>Tons</s>A few more security fixes. <br> 
 <s>Overhaul the dbconnection system.</s> <br> 
-Add in a registration system *Optional feature*<br>
+<s>Add in a registration system *Optional feature*</s><br>
 
 Known Bugs
 --------------------------------
 <s>Adds an empty $_POST on login</s>(BUG SQUASHED)<br>
 Allows you to submit an empty $_POST on submit to team<br>
 *******************************************************************<br>
-Will enter RC Builds when all core feature bugs are squashed!<BR>
+Will enter RC Builds when all bugs are squashed!<BR>
 ********************************************************************<br>
 
 
