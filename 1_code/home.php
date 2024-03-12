@@ -24,7 +24,7 @@ if (!isset($_SESSION['loggedin'])) {
 <!--Navigation div -->
 <nav class="navtop">
     <div>
-        <h1>Innovative Soulutions Corporation</h1>
+        <h1>Innovative Solutions Corporation</h1>
         <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
         <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
     </div>
