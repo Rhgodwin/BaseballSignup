@@ -99,6 +99,7 @@ BUG with submit where clicking on the button will allow add<br>
 Known Bugs
 --------------------------------
 <s>Adds an empty $_POST on login</s>(BUG SQUASHED)<br>
+<s>Profile page not connecting to the DB</s>(BUG SQUASHED)<br>
 Allows you to submit an empty $_POST on submit to team<br>
 *******************************************************************<br>
 Will enter RC Builds when all bugs are squashed!<BR>
