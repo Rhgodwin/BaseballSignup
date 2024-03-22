@@ -33,10 +33,12 @@ if (!isset($_SESSION['loggedin'])) {
 <header> <!--welcome message -->
 
     <div class="welcome">
+        <div class="annual">
         <img src="anim.gif" alt="baseball" class="img1">
-        <img src="anim.gif" alt="baseball" class="img2">
         <h1>Annual Baseball Tech Tourney Signup </h1>
-
+        <img src="anim.gif" alt="baseball" class="img2">
+        
+        </div>
         <marquee scrollamount="10" width="60%" direction="right" onclick="stop">
             <h2> Welcome back,
                 <?= $_SESSION['name'] ?>! Ready to play some baseball?
@@ -45,12 +47,10 @@ if (!isset($_SESSION['loggedin'])) {
 
 
 
-
-
     </div>
 </header>
 
-<body>
+<body class="main">
 
     <!--Form data to get input and output -->
 
