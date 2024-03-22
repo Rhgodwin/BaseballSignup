@@ -78,20 +78,29 @@ body{
 }
 .welcome {
     
-    justify-content: center;
+   justify-content: center;
 	text-align-last: center;
     padding-top:50px;
-    padding-bottom: 20px;;
+    padding-bottom: 20px;
+	width: 100%;
 }
 /* FOR TITLE of the Signup Page */
 h1 {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size:50px;
+	text-align: center;
 } 
 h2{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size:20px;
+	text-align: center;
+} /*lock down title Annual Baseball Tech*/ 
+.annual {
+	display: flex;
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
 }
 /* FOR header of the checkbox input */
 h4 {
@@ -134,6 +143,8 @@ h4 {
 }/* FOR for nav bar links */
 .navtop div a:hover {
 	color: rgba(90, 235, 17, 0.937);
+
+	
 }/* FOR feildset (checkbox) of the Signup Page */
 
 	.fs1 {
@@ -238,15 +249,15 @@ button {
 	float:left;
 	height:200px;
 	width:200px;
-	margin-left:150px;
-	border-radius:50%;
+	margin-left:0px;
+	border-radius:25%;
   }
   .img2{
 	float:right;
 	height:200px;
 	width:200px;
-	margin-right:150px;
-	border-radius:50%;
+	margin-right:0px;
+	border-radius:25%;
   }
   #countdown{
 font-size:large;
