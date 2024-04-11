@@ -82,6 +82,12 @@ Registration system added (Working)<br>
 Updated password detection system<br>
 Added in new system for detecting if a employee exists<br>
 
+Version Beta .09
+-----------------------
+Squashed submit bug!!!!!
+All bugs have been Sqaushed!!!!
+
+
 
 
 
@@ -91,7 +97,7 @@ TODO
 -------------------
 <s>Add more PHP DB functions for functionality</s><br>
 <s>Add addtional improve PHP code for back end</s><br>
-BUG with submit where clicking on the button will allow add<br>
+<s>BUG with submit where clicking on the button will allow add</s>(BUG SQUASHED)<br>
 <s>Tons</s>A few more security fixes. <br> 
 <s>Overhaul the dbconnection system.</s> <br> 
 <s>Add in a registration system *Optional feature*</s><br>

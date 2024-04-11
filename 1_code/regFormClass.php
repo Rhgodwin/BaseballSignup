@@ -13,21 +13,26 @@ function ProcessRegistrationForm()
 {
 
         //retrieve form data          
-        $name = $_POST['dbname'];
-        $team = $_POST['team'];
-        $position = $_POST['position'];
+        $name = $_POST['dbname'] ?? '';
+        $team = $_POST['team'] ?? '';
+        $position = $_POST['position'] ?? '';
 
         $pclass = new playersClass();
         $con = mysqli_connect("localhost", "dataman", "data", "pwdb");
         
-
-        if ($pclass->recordExists($team, $position)) {
+        if (empty($team) || empty($position)){
+           
+            
+            echo "<script>alert('Must Select a Team and Position'); window.location.href='home.php';</script>";
+            
+           
+        }
+        elseif ($pclass->recordExists($team, $position)) {
             //if a record is found code goes in here
             
             header("location: sorry.php");
-        } else {
-            # code...
-              
+        } 
+         else {
 
 
         $sql = "INSERT INTO players
