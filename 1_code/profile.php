@@ -15,13 +15,19 @@ if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 // no passwd in $session so get it from db
-$stmt = $con->prepare('SELECT password, email FROM accounts WHERE id = ?');
+$stmt = $con->prepare('SELECT password, username, email FROM accounts WHERE id = ?');
+
 // Use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password, $email);
+$stmt->bind_result($password,$username, $email);
 $stmt->fetch();
 $stmt->close();
+$stmt2 = $con->prepare("SELECT `team` , `position` FROM `players` WHERE `playername` = '$username'");
+$stmt2->execute();
+$stmt2->bind_result($team,$position);
+$stmt2->fetch();
+$stmt2->close();
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,16 +52,25 @@ $stmt->close();
 				<table>
 					<tr>
 						<td>Username:</td>
-						<td><?=$_SESSION['name']?></td>
+						<td><?=$username?></td>
 					</tr>
 					
 					<tr>
 						<td>Email:</td>
 						<td><?=$email?></td>
 					</tr>
+					<tr>
+						<td>Current Team:</td>
+						<td><?=$team?></td>
+					</tr>
+						<tr>
+							<td>Current Position:</td>
+							<td><?=$position?></td>
+
 				</table>
 			</div>
 		</div>
-		<a href="home.php">Return Home</a>
+		<a href="home.php">Return Home</a><br>
+		
 	</body>
 </html>
