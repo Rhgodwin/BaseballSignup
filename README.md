@@ -111,9 +111,12 @@ Known Bugs
 Bugs Squashed Enter Final Build Phase<BR>
 ********************************************************************<br>
 
-*********************************
+
 Final Build 1.0
-*********************************
+------------------
+Feature Completed
+Squashed all known Bugs
+
 
 Final Demo Link:
 ---------------------

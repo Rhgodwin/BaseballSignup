@@ -4,8 +4,8 @@
     <head>
         <title>Success Page</title>
         <div class ="suHeadContainer">
-        <h1 style="text-align: center;">Sorry that position was already filled by</h1>
-        <h1 style="text-align:center;"><?= $_SESSION['name'] ?></h1>
+        <h1 style="text-align: center;">Sorry that position was already filled</h1>
+        
         <p style="text-align:center; font-size: larger;">Redirecting back to sign up in <span id="countdown"></span> seconds"</p>
         </div>
         <link href="style.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css">
