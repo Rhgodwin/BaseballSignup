@@ -106,13 +106,17 @@ Known Bugs
 --------------------------------
 <s>Adds an empty $_POST on login</s>(BUG SQUASHED)<br>
 <s>Profile page not connecting to the DB</s>(BUG SQUASHED)<br>
-Allows you to submit an empty $_POST on submit to team<br>
+<s>Allows you to submit an empty $_POST on submit to team</s><br>
 *******************************************************************<br>
-Will enter RC Builds when all bugs are squashed!<BR>
+Bugs Squashed Enter Final Build Phase<BR>
 ********************************************************************<br>
 
-Current Demo Link:
+*********************************
+Final Build 1.0
+*********************************
+
+Final Demo Link:
 ---------------------
-https://youtu.be/wOouZxQOeSM
+link goes here
 ----------------------
 
