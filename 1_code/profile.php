@@ -16,12 +16,12 @@ if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 // no passwd in $session so get it from db
-$stmt = $con->prepare('SELECT id, username, email FROM accounts WHERE id = ?');
+$stmt = $con->prepare('SELECT id, password, username, email FROM accounts WHERE id = ?');
 
 // Use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($id,$username, $email);
+$stmt->bind_result($id,$password,$username, $email);
 $stmt->fetch();
 $stmt->close();
 $stmt2 = $con->prepare("SELECT `team` , `position` FROM `players` WHERE `playername` = '$username'");
@@ -59,6 +59,10 @@ $stmt2->close();
 					<tr>
 						<td>Email:</td>
 						<td><?=$email?></td>
+					</tr>
+					<tr>
+						<td>Current Password:</td>
+						<td><?=$password?></td>
 					</tr>
 					<tr>
 						<td>Current Team:</td>
