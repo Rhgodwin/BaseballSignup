@@ -117,6 +117,7 @@ Final Build 1.0
 Feature Completed
 Squashed all known Bugs
 Added small profile feature showing current team and position
+Added feature to all users to change account settings
 
 Final Demo Link:
 ---------------------
