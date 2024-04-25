@@ -6,7 +6,8 @@ if (!isset($_SESSION['loggedin']) || !isset($_SESSION['isAdmin']) !== TRUE ) {
     header('Location: logout.php');
     exit;
 
-} 
+}
+
 // Include the database connection file
 require_once("newDBconnect.php");
 
@@ -35,7 +36,13 @@ if (isset($_POST['update'])) {
 		$result = mysqli_query($mysqli, "UPDATE accounts SET `username` = '$name', `password` = '$password', `email` = '$email' WHERE `id` = $id");
 		
 		// Display success message
-		echo "<p><font color='green'>Data updated successfully!</p>";
-		echo "<a href='admin.php'>View Result</a>";
-	}
-}
+
+		if (isset($_SESSION['last_page']) && $_SESSION['last_page'] == 'admin.php') {
+			echo "<p style='color: green;'>Data updated successfully!</p>";
+			echo "<a href='admin.php'>View Result</a>";
+		}  else if(isset($_SESSION['last_page']) && $_SESSION['last_page'] == 'profile.php'){
+			echo "<p style='color: green;'>Data updated successfully!</p>";
+			echo "<a href='profile.php'>View Result</a>";
+		}
+		}
+		}

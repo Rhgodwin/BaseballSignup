@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$_SESSION['last_page'] ='admin.php';
 // Check if the user is logged in and is an admin
 if (!isset($_SESSION['loggedin']) || !isset($_SESSION['isAdmin']) !== TRUE ) {
     header('Location: index.html');

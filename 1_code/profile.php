@@ -1,6 +1,7 @@
 <?php
 // session start
 session_start();
+$_SESSION['last_page'] = 'profile.php';
 // Validation for user is logged in
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
@@ -15,12 +16,12 @@ if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 // no passwd in $session so get it from db
-$stmt = $con->prepare('SELECT password, username, email FROM accounts WHERE id = ?');
+$stmt = $con->prepare('SELECT id, username, email FROM accounts WHERE id = ?');
 
 // Use the account ID to get the account info.
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
-$stmt->bind_result($password,$username, $email);
+$stmt->bind_result($id,$username, $email);
 $stmt->fetch();
 $stmt->close();
 $stmt2 = $con->prepare("SELECT `team` , `position` FROM `players` WHERE `playername` = '$username'");
@@ -70,7 +71,7 @@ $stmt2->close();
 				</table>
 			</div>
 		</div>
-		<a href="home.php">Return Home</a><br>
-		
+		<a href="home.php" style="font-size:24px;">Return Home</a><br>
+		<a href="editAcct.php?id=<?php echo $id; ?>" Style="font-size:24px;">Change Account Settings</a>
 	</body>
 </html>
