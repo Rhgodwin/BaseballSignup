@@ -32,7 +32,6 @@ $email = $resultData['email'];
 <body>
     <h2>Edit Data</h2>
     <p>
-	    <a href="admin.php">Home</a>
     </p>
 	
 	<form name="edit" method="post" action="editActionAcct.php">
