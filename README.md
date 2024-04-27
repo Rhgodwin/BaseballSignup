@@ -114,10 +114,10 @@ Bugs Squashed Enter Final Build Phase<BR>
 
 Final Build 1.0
 ------------------
-Feature Completed
-Squashed all known Bugs
-Added small profile feature showing current team and position
-Added feature to allow users to change account settings
+Feature Completed<br>
+Squashed all known Bugs<br>
+Added small profile feature showing current team and position<br>
+Added feature to allow users to change account settings<br>
 
 Midterm Demo Link:
 ---------------------
