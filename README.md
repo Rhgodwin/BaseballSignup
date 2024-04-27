@@ -98,7 +98,7 @@ TODO
 <s>Add more PHP DB functions for functionality</s><br>
 <s>Add addtional improve PHP code for back end</s><br>
 <s>BUG with submit where clicking on the button will allow add</s>(BUG SQUASHED)<br>
-<s>Tons</s>A few more security fixes. <br> 
+<s>A few more security fixes.</s> <br> 
 <s>Overhaul the dbconnection system.</s> <br> 
 <s>Add in a registration system *Optional feature*</s><br>
 
