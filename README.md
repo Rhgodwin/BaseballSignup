@@ -119,6 +119,11 @@ Squashed all known Bugs
 Added small profile feature showing current team and position
 Added feature to allow users to change account settings
 
+Midterm Demo Link:
+---------------------
+https://youtu.be/wOouZxQOeSM
+---------------------
+
 Final Demo Link:
 ---------------------
 https://youtu.be/rCECv88MAHU
